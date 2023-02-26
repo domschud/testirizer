@@ -5,18 +5,41 @@
         <style>
         </style>
   </head>
-  <body>
+    <body>
         <!-- comment  p-переход на новую строку, абзац h1 - заголовок yeye-->
-        <p>Кликните сюда чтобы поучить случайное слово!</p>
-            <!--script - собственно джава функции, действия, задания-->
-            <script>
+        <p>рекомендация мироздания!</p>
+        <h1> случайное слово!</h1>          
+        <p id="suda">Кликните сюда чтобы узнать число!</p> 
+
+		    <script>
+			      const para1 = document.querySelector('#suda');	
+			      var Chet=["пауза", "поворот", "продолжай", "вперед", "танцуй", "трансформируй"];
+      			randomХ=Math.floor(Math.random() * 5);
+      			randomУ=Math.floor(Math.random() * 5);
+        		if(randomХ>randomУ)
+				        para1.textContent=randomХ + Chet[randomХ] + randomУ;  
+			      else 
+				        para1.textContent=('нихт');
+        </script>
+  
+ <!--script - собственно джава функции, действия, задания-->
+         <script>
+                //задает где писать слова, между р
+                 const para2 = document.querySelector('h1');                
                 // функция выдающая случайное число из массива
                 function getRandomWord() {
                 var randomWords = ["действуй", "пауза", "поворот", "поменяй местами", "продолжай", "трансформируй в новое", "отвлекись и потанцуй"];
                 var randomIndex = Math.floor(Math.random() * 7);
                 return randomWords[randomIndex];
-                }
-                getRandomWord();
+                };
+                para2.textContent=getRandomWord();
+	 	     </script>
+
+
+
+
+  
+      
                 <p>Кликните сюда чтобы узнать число!</p>
                      // создаем кнопку 
                     const button = document.getElementById('generate-button');
@@ -31,6 +54,6 @@
                            else alert('переформулируй');
                     });
                        
-             </script>
+           
   </body>
 </html>
