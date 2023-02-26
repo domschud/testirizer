@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript- тестировка разного</title>
+        <style>
+        </style>
+  </head>
+  <body>
+        //<p>-переход на новую строку, абзац <h1> - заголовок
+        <p>Кликните сюда чтобы поучить случайное слово!</p>
+            //<script> - собственно джава функции, действия, задания
+            <script>
+                //функция выдающая случайное число из массива
+                function getRandomWord() {
+                var randomWords = ["действуй", "пауза", "поворот", "поменяй местами", "продолжай", "трансформируй в новое", "отвлекись и потанцуй"];
+                var randomIndex = Math.floor(Math.random() * 7);
+                return randomWords[randomIndex];
+                }
+                getRandomWord();
+                <p>Кликните сюда чтобы узнать число!</p>
+                     // создаем кнопку 
+                    const button = document.getElementById('generate-button');
+                    // добавляем надпись-действие 
+                    button.addEventListener('click', () => {
+                    var Chet=["ноль","раз", "два", "три", "четыре", "Пять"];
+                    //бросаем 2 кубика с условием
+                   // Generate a random index into the array of images
+                    const randomХ=Math.floor(Math.random() * 5);
+                    const randomУ=Math.floor(Math.random() * 5);
+                           if(randomХ>randomУ) Chet[randomХ];
+                           else alert('переформулируй');
+             });
+                       
+            
+            </script>
+  </body>
+</html>
